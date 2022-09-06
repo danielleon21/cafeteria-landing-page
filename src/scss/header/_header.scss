@@ -1,0 +1,26 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.header {
+  padding: 5rem 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    background-color: v.$black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.6;
+  }
+
+  .header-content {
+    position: relative;
+  }
+}
+
+.header-home {
+  background-image: url(../../../build/img/header_inicio.jpg);
+}
