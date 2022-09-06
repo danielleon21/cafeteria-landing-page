@@ -19,7 +19,7 @@ function css(done) {
   // 2. Compile
   // save the .css file
   src("src/scss/app.scss")
-    .pipe(sass({ outputStyle: "compressed" }))
+    .pipe(sass())
     .pipe(postcss([autoprefixer()]))
     .pipe(dest("build/css"));
   done();
