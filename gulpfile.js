@@ -16,7 +16,9 @@ function css(done) {
   // 1. Identify the file
   // 2. Compile
   // save the .css file
-  src("src/scss/app.scss").pipe(sass()).pipe(dest("build/css"));
+  src("src/scss/app.scss")
+    .pipe(sass({ outputStyle: "compressed" }))
+    .pipe(dest("build/css"));
   done();
 }
 
