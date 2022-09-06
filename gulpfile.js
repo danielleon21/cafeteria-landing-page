@@ -9,6 +9,8 @@
 // importing gulp
 const { src, dest, watch } = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
 
 // compile gulp
 function css(done) {
@@ -18,6 +20,7 @@ function css(done) {
   // save the .css file
   src("src/scss/app.scss")
     .pipe(sass({ outputStyle: "compressed" }))
+    .pipe(postcss([autoprefixer()]))
     .pipe(dest("build/css"));
   done();
 }
