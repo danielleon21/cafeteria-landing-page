@@ -26,12 +26,13 @@ function css(done) {
 }
 
 function dev() {
-  watch("src/scss/app.scss", css);
+  watch("src/scss/**/*.scss", css);
+  //   watch("src/scss/app.scss", css);
 }
 
 exports.css = css;
 exports.dev = dev;
 exports.default = parallel(css, dev);
 
-// Series -
-// Parallel -
+// Series - start a task, and after the task finish, start the next one
+// Parallel - all task start at the same time.
