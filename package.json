@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/danielleon-dev/cafeteria-landing-page/issues"
   },
-  "homepage": "https://github.com/danielleon-dev/cafeteria-landing-page#readme"
+  "homepage": "https://github.com/danielleon-dev/cafeteria-landing-page#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }
