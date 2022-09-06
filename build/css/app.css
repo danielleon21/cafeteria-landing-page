@@ -371,3 +371,30 @@ h3 {
 .bg-primary {
   background-color: #e8505b;
 }
+
+.header {
+  padding: 5rem 0;
+  position: relative;
+}
+@media (min-width: 480px) {
+  .header {
+    padding: 2rem 0;
+  }
+}
+.header::before {
+  content: "";
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.6;
+}
+.header .header-content {
+  position: relative;
+}
+
+.header-home {
+  background-image: url(../../../build/img/header_inicio.jpg);
+}
