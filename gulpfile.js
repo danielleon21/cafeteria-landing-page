@@ -7,10 +7,14 @@
 // exports.firstTask = task;
 
 // importing gulp
+// CSS
 const { src, dest, watch, series, parallel } = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
+
+// Images
+const imagemin = require("gulp-imagemin");
 
 // compile gulp
 function css(done) {
@@ -25,14 +29,23 @@ function css(done) {
   done();
 }
 
+function images(done) {
+  src("src/img/**/*")
+    .pipe(imagemin({ optimizationLevel: 3 }))
+    .pipe(dest("build/img"));
+  done();
+}
+
 function dev() {
   watch("src/scss/**/*.scss", css);
-  //   watch("src/scss/app.scss", css);
+  watch("src/img/**/*", images);
+  //watch("src/scss/app.scss", css);
 }
 
 exports.css = css;
 exports.dev = dev;
-exports.default = parallel(css, dev);
+exports.images = images;
+exports.default = parallel(images, css, dev);
 
 // Series - start a task, and after the task finish, start the next one
 // Parallel - all task start at the same time.
