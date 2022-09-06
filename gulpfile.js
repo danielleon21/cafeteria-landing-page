@@ -7,9 +7,10 @@
 // exports.firstTask = task;
 
 // importing gulp
-const { src, dest } = require("gulp");
+const { src, dest, watch } = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 
+// compile gulp
 function css(done) {
   // compile sass
   // 1. Identify the file
@@ -19,4 +20,9 @@ function css(done) {
   done();
 }
 
+function dev() {
+  watch("src/scss/app.scss", css);
+}
+
 exports.css = css;
+exports.dev = dev;
