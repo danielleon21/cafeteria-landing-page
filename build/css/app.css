@@ -393,3 +393,25 @@ h3 {
 .header-home {
   background-image: url(../../../build/img/header_inicio.jpg);
 }
+
+.bar {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .bar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.bar .logo {
+  width: 50%;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .bar .logo {
+    margin: 0;
+    width: 20rem;
+  }
+}
