@@ -62,7 +62,7 @@ exports.dev = dev;
 exports.images = images;
 exports.webpVersion = webpVersion;
 exports.avifVersion = avifVersion;
-exports.default = series(images, webpVersion, avifVersion, css, dev);
+exports.default = series(css, dev);
 
 // Series - start a task, and after the task finish, start the next one
 // Parallel - all task start at the same time.
