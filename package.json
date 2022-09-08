@@ -18,6 +18,7 @@
   "homepage": "https://github.com/danielleon-dev/cafeteria-landing-page#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.8",
+    "cssnano": "^5.1.13",
     "gulp": "^4.0.2",
     "gulp-avif": "^1.1.1",
     "gulp-imagemin": "^7.1.0",
