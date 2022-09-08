@@ -2,8 +2,7 @@
 @use "base/mixins" as m;
 
 .our-menu {
-  background-image: url(../../../build/img/menu_arriba.svg),
-    url(../../../build/img/menu_abajo.svg),
+  background-image: url(../img/menu_arriba.svg), url(../img/menu_abajo.svg),
     linear-gradient(to top, v.$primary, v.$primary);
   background-repeat: no-repeat;
   background-position: center 5rem, center 92%, 100%;

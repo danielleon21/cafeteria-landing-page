@@ -4,7 +4,7 @@
 .contact-content {
   @include m.tablet {
     @include m.grid(2, v.$spacing);
-    background-image: url(../../../build/img/granos_cafe.jpg);
+    background-image: url(../img/granos_cafe.jpg);
     background-repeat: no-repeat;
     background-position: right center;
   }
